@@ -4,10 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import nasdaq.homework.presidentelectionapp.dtos.response.RegionDto;
-import nasdaq.homework.presidentelectionapp.dtos.response.TotalResultByCandidateDto;
-import nasdaq.homework.presidentelectionapp.dtos.response.TotalResultByRegionDto;
-import nasdaq.homework.presidentelectionapp.model.Candidate;
 import nasdaq.homework.presidentelectionapp.model.Region;
 import nasdaq.homework.presidentelectionapp.repository.RegionRepository;
 
@@ -15,14 +11,10 @@ import nasdaq.homework.presidentelectionapp.repository.RegionRepository;
 public class RegionServiceImp implements RegionService
 {
     private final RegionRepository regionRepository;
-    private final CandidateService candidateService;
-    private final VoterService voterService;
 
-    public RegionServiceImp(final RegionRepository pRegionRepository, final CandidateService pService, final VoterService pVoterService)
+    public RegionServiceImp(final RegionRepository pRegionRepository)
     {
         regionRepository = pRegionRepository;
-        candidateService = pService;
-        voterService = pVoterService;
     }
 
     @Override
